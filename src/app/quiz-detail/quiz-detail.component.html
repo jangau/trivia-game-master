@@ -1,0 +1,14 @@
+<app-alerts></app-alerts>
+<div *ngIf="quiz">
+  <h3>{{quiz.name}}</h3>
+  <ul>
+    <li class="col-sm-12" *ngFor="let question of quiz.question_set">
+      {{question.question_text}}
+        <ul>
+          <li *ngFor="let answer of question.answer_set">
+            {{answer.answer_text}}
+          </li>
+        </ul>
+    </li>
+  </ul>
+</div>

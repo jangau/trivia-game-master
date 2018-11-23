@@ -1,0 +1,8 @@
+<app-alerts></app-alerts>
+<ul class="quizzes">
+  <li *ngFor="let quiz of quizzes">
+      <a routerLink="/quiz-detail/{{quiz.id}}">
+        <span class="badge">{{quiz.id}}</span>{{quiz.name}}
+      </a>
+  </li>
+</ul>

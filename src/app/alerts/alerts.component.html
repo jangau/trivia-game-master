@@ -1,0 +1,5 @@
+<div *ngIf="alertService.alerts.length">
+  <p *ngFor="let alert of alertService.alerts">
+    <ngb-alert [type]="alert.type" (close)="alertService.dismiss(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+</div>
